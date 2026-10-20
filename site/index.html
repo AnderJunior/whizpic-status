@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Status do WhizPic</title>
+    <meta name="description" content="Situação em tempo real dos sistemas do WhizPic: site, API, banco de dados e pagamentos." />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="estilo.css" />
+  </head>
+  <body>
+    <header class="topo">
+      <div class="largura topo-linha">
+        <a class="marca" href="./" aria-label="Status do WhizPic">
+          <img src="logo.png" alt="WhizPic" />
+          <span>Status</span>
+        </a>
+        <a class="ir-app" href="https://app.whizpic.com/">Ir para o WhizPic →</a>
+      </div>
+    </header>
+
+    <main class="largura">
+      <div id="avisos"></div>
+
+      <section id="faixa" class="faixa faixa-carregando" aria-live="polite">
+        <span class="faixa-icone" aria-hidden="true"></span>
+        <div>
+          <p class="faixa-titulo">Verificando os sistemas…</p>
+          <p class="faixa-detalhe"></p>
+        </div>
+      </section>
+
+      <section class="cartao" aria-labelledby="t-componentes">
+        <div class="cartao-cabeca">
+          <h2 id="t-componentes">Sistemas</h2>
+          <span class="legenda-dias">Disponibilidade nos últimos <span class="so-largo">90</span><span class="so-celular">30</span> dias</span>
+        </div>
+        <ul id="componentes" class="componentes"></ul>
+      </section>
+
+      <section aria-labelledby="t-incidentes">
+        <h2 id="t-incidentes" class="titulo-secao">Histórico de incidentes</h2>
+        <div id="incidentes"></div>
+      </section>
+    </main>
+
+    <footer class="largura rodape">
+      <p id="atualizacao">—</p>
+      <p>Verificado automaticamente a cada 5 minutos, de fora do servidor do WhizPic.</p>
+    </footer>
+
+    <div id="dica" class="dica" role="tooltip" hidden></div>
+    <script src="app.js"></script>
+  </body>
+</html>

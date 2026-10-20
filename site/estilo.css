@@ -1,0 +1,150 @@
+:root {
+  --fundo: #f7f7fb;
+  --cartao: #ffffff;
+  --borda: #e4e4ee;
+  --texto: #1f1d2b;
+  --suave: #6b6880;
+  --marca: #6d56ab;
+  --ok: #2ea56b;
+  --parcial: #e0a526;
+  --fora: #df4a46;
+  --semdados: #d9d8e3;
+  --aviso: #4f6bd8;
+  --sombra: 0 1px 2px rgba(31, 29, 43, 0.06), 0 4px 16px rgba(31, 29, 43, 0.04);
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fundo: #14131b;
+    --cartao: #1d1c27;
+    --borda: #2e2c3c;
+    --texto: #ecebf3;
+    --suave: #a29fb8;
+    --marca: #a893e6;
+    --semdados: #3a3849;
+    --sombra: none;
+    color-scheme: dark;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--fundo);
+  color: var(--texto);
+  font: 15px/1.5 "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.largura { width: 100%; max-width: 860px; margin: 0 auto; padding-inline: 20px; }
+
+/* topo */
+.topo { background: var(--cartao); border-bottom: 1px solid var(--borda); }
+.topo-linha { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 18px; }
+.marca { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--texto); }
+.marca img { height: 44px; width: auto; }
+.marca span { font-size: 18px; font-weight: 600; color: var(--suave); border-left: 1px solid var(--borda); padding-left: 12px; }
+.ir-app { color: var(--marca); text-decoration: none; font-weight: 600; font-size: 14px; white-space: nowrap; }
+.ir-app:hover { text-decoration: underline; }
+
+main { padding-block: 32px 8px; }
+
+/* faixa do estado geral */
+.faixa {
+  display: flex; align-items: center; gap: 16px;
+  padding: 20px 24px; border-radius: 12px; margin-bottom: 28px;
+  color: #fff; box-shadow: var(--sombra);
+}
+.faixa-ok { background: var(--ok); }
+.faixa-fora { background: var(--fora); }
+.faixa-incerta, .faixa-carregando { background: var(--suave); }
+.faixa-titulo { margin: 0; font-size: 20px; font-weight: 600; }
+.faixa-detalhe { margin: 2px 0 0; opacity: 0.92; font-size: 14px; }
+.faixa-detalhe:empty { display: none; }
+.faixa-icone {
+  flex: none; width: 34px; height: 34px; border-radius: 50%;
+  background: rgba(255, 255, 255, 0.22) center / 20px no-repeat;
+}
+.faixa-ok .faixa-icone { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E"); }
+.faixa-fora .faixa-icone { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round'%3E%3Cpath d='M12 6v8M12 18.5v.5'/%3E%3C/svg%3E"); }
+.faixa-incerta .faixa-icone, .faixa-carregando .faixa-icone { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round'%3E%3Cpath d='M9 9a3 3 0 1 1 4 2.8c-.7.3-1 .9-1 1.7v.5M12 18.5v.5'/%3E%3C/svg%3E"); }
+
+/* avisos manuais */
+.aviso {
+  border: 1px solid var(--borda); border-left: 5px solid var(--aviso);
+  background: var(--cartao); border-radius: 10px; padding: 14px 18px; margin-bottom: 16px; box-shadow: var(--sombra);
+}
+.aviso-incidente { border-left-color: var(--fora); }
+.aviso-manutencao { border-left-color: var(--marca); }
+.aviso h3 { margin: 0 0 4px; font-size: 16px; }
+.aviso p { margin: 0; color: var(--suave); white-space: pre-line; }
+.aviso small { display: block; margin-top: 6px; color: var(--suave); }
+
+/* cartao de componentes */
+.cartao { background: var(--cartao); border: 1px solid var(--borda); border-radius: 12px; box-shadow: var(--sombra); margin-bottom: 40px; }
+.cartao-cabeca { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; padding: 16px 22px; border-bottom: 1px solid var(--borda); }
+.cartao-cabeca h2 { margin: 0; font-size: 16px; }
+.legenda-dias { font-size: 13px; color: var(--suave); }
+
+.componentes { list-style: none; margin: 0; padding: 0; }
+.componente { padding: 18px 22px 16px; border-bottom: 1px solid var(--borda); }
+.componente:last-child { border-bottom: 0; }
+.comp-linha { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 10px; }
+.comp-nome { font-weight: 600; }
+.comp-desc { display: block; font-weight: 400; font-size: 13px; color: var(--suave); }
+.comp-estado { font-size: 14px; font-weight: 600; text-align: right; white-space: nowrap; }
+.comp-estado small { display: block; font-weight: 400; color: var(--suave); }
+.estado-ok { color: var(--ok); }
+.estado-fora { color: var(--fora); }
+.estado-desconhecido { color: var(--suave); }
+
+.barras { display: flex; gap: 2px; height: 34px; }
+.barra { flex: 1; min-width: 0; border-radius: 2px; background: var(--semdados); cursor: default; transition: opacity 0.15s; }
+.barra:hover, .barra:focus { opacity: 0.7; outline: none; }
+.barra.b-ok { background: var(--ok); }
+.barra.b-parcial { background: var(--parcial); }
+.barra.b-fora { background: var(--fora); }
+.barras-pe { display: flex; justify-content: space-between; gap: 8px; margin-top: 6px; font-size: 12px; color: var(--suave); }
+.barras-pe .meio { flex: 1; text-align: center; position: relative; }
+
+/* no celular, 30 dias em vez de 90 (como o status.claude.com) */
+@media (max-width: 600px) {
+  .barra:nth-child(-n + 60) { display: none; }
+  .comp-linha { align-items: flex-start; }
+  .faixa { padding: 16px 18px; }
+  .faixa-titulo { font-size: 17px; }
+  .marca img { height: 28px; }
+}
+
+/* incidentes */
+.titulo-secao { font-size: 20px; margin: 0 0 16px; }
+.dia { padding: 14px 0 18px; border-top: 1px solid var(--borda); }
+.dia h3 { margin: 0 0 8px; font-size: 15px; }
+.dia-vazio { margin: 0; color: var(--suave); font-size: 14px; }
+.incidente { margin: 0 0 14px; }
+.incidente h4 { margin: 0 0 6px; font-size: 16px; }
+.inc-aberto h4 { color: var(--fora); }
+.inc-resolvido h4 { color: var(--texto); }
+.atualizacao { margin: 0 0 6px; font-size: 14px; }
+.atualizacao strong { margin-right: 4px; }
+.atualizacao small { display: block; color: var(--suave); }
+
+.rodape { padding-block: 8px 40px; color: var(--suave); font-size: 13px; border-top: 1px solid var(--borda); }
+.rodape p { margin: 6px 0; }
+.atrasado { color: var(--parcial); font-weight: 600; }
+
+/* dica das barras */
+.dica {
+  position: fixed; z-index: 10; max-width: 260px; pointer-events: none;
+  background: var(--texto); color: var(--fundo); border-radius: 8px;
+  padding: 8px 11px; font-size: 13px; line-height: 1.4; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+.dica strong { display: block; }
+
+/* rótulos que mudam entre computador (90 dias) e celular (30 dias) */
+.so-celular { display: none; }
+@media (max-width: 600px) {
+  .so-largo { display: none; }
+  .so-celular { display: inline; }
+}

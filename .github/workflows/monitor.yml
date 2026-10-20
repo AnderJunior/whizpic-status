@@ -1,0 +1,81 @@
+name: Monitor do WhizPic
+
+# Verifica o WhizPic de fora do servidor e publica a página de status.
+# Roda a cada 5 minutos — em horário de pico o GitHub pode atrasar alguns minutos.
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write # gravar o histórico no branch "dados"
+  pages: write # publicar a página
+  id-token: write # exigido pelo deploy do GitHub Pages
+
+concurrency:
+  group: monitor
+  cancel-in-progress: false
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    environment:
+      name: github-pages
+      url: ${{ steps.publicar.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Recupera o histórico (branch "dados")
+        run: |
+          mkdir -p publicar
+          if git fetch -q origin dados 2>/dev/null; then
+            git show FETCH_HEAD:status.json > publicar/status.json || rm -f publicar/status.json
+          fi
+
+      - name: Verifica o WhizPic
+        run: node monitor/verificar.mjs publicar/status.json
+
+      - name: Guarda o histórico
+        # Um commit só, sempre sobrescrito: o branch "dados" não acumula histórico.
+        run: |
+          cd publicar
+          git init -q -b dados
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add status.json
+          git commit -q -m "status $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          git push -q -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" dados
+          rm -rf .git
+
+      - name: Monta a página
+        run: cp -r site/. publicar/ && cp avisos.json publicar/
+
+      # Publicar pelo Actions (e não por branch) evita o limite de 10 publicações
+      # por hora do GitHub Pages — o monitor publica 12.
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: publicar
+      - id: publicar
+        uses: actions/deploy-pages@v4
+
+      - name: Mantém o agendamento vivo
+        # O GitHub desliga sozinho os agendamentos de repositório público sem
+        # atividade há 60 dias. Um commit vazio a cada 45 dias evita isso.
+        run: |
+          ultimo=$(git log -1 --format=%ct origin/main)
+          if [ $(( $(date +%s) - ultimo )) -gt $(( 45 * 86400 )) ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -q --allow-empty -m "manter o monitor ativo"
+            git push -q origin HEAD:main
+          fi
