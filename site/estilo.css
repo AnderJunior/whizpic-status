@@ -1,5 +1,6 @@
 :root {
-  --fundo: #f7f7fb;
+  /* Sempre clara, independente do tema do aparelho. */
+  --fundo: #ffffff;
   --cartao: #ffffff;
   --borda: #e4e4ee;
   --texto: #1f1d2b;
@@ -12,20 +13,6 @@
   --aviso: #4f6bd8;
   --sombra: 0 1px 2px rgba(31, 29, 43, 0.06), 0 4px 16px rgba(31, 29, 43, 0.04);
   color-scheme: light;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --fundo: #14131b;
-    --cartao: #1d1c27;
-    --borda: #2e2c3c;
-    --texto: #ecebf3;
-    --suave: #a29fb8;
-    --marca: #a893e6;
-    --semdados: #3a3849;
-    --sombra: none;
-    color-scheme: dark;
-  }
 }
 
 * { box-sizing: border-box; }
