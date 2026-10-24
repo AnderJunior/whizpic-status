@@ -1,0 +1,161 @@
+{
+ "atual": {
+  "site": {
+   "estado": "ok",
+   "ms": 487,
+   "desde": "2026-10-20T12:40:42.829Z"
+  },
+  "api": {
+   "estado": "ok",
+   "ms": 832,
+   "desde": "2026-10-20T12:40:42.829Z"
+  },
+  "banco": {
+   "estado": "ok",
+   "ms": 74,
+   "desde": "2026-10-20T12:40:42.829Z"
+  },
+  "pagamentos": {
+   "estado": "ok",
+   "ms": 415,
+   "desde": "2026-10-20T12:40:42.829Z"
+  }
+ },
+ "dias": {
+  "2026-10-20": {
+   "site": {
+    "ok": 7,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "api": {
+    "ok": 7,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "banco": {
+    "ok": 7,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "pagamentos": {
+    "ok": 7,
+    "fora": 0,
+    "desconhecido": 0
+   }
+  },
+  "2026-10-21": {
+   "site": {
+    "ok": 6,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "api": {
+    "ok": 6,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "banco": {
+    "ok": 6,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "pagamentos": {
+    "ok": 6,
+    "fora": 0,
+    "desconhecido": 0
+   }
+  },
+  "2026-10-22": {
+   "site": {
+    "ok": 6,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "api": {
+    "ok": 6,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "banco": {
+    "ok": 6,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "pagamentos": {
+    "ok": 6,
+    "fora": 0,
+    "desconhecido": 0
+   }
+  },
+  "2026-10-23": {
+   "site": {
+    "ok": 6,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "api": {
+    "ok": 6,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "banco": {
+    "ok": 6,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "pagamentos": {
+    "ok": 6,
+    "fora": 0,
+    "desconhecido": 0
+   }
+  },
+  "2026-10-24": {
+   "site": {
+    "ok": 3,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "api": {
+    "ok": 3,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "banco": {
+    "ok": 3,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "pagamentos": {
+    "ok": 3,
+    "fora": 0,
+    "desconhecido": 0
+   }
+  }
+ },
+ "incidentes": [],
+ "componentes": [
+  {
+   "id": "site",
+   "nome": "Site",
+   "descricao": "app.whizpic.com — as páginas do sistema"
+  },
+  {
+   "id": "api",
+   "nome": "API",
+   "descricao": "Login, livros, geração e compras"
+  },
+  {
+   "id": "banco",
+   "nome": "Banco de dados",
+   "descricao": "Onde ficam contas, livros e compras"
+  },
+  {
+   "id": "pagamentos",
+   "nome": "Pagamentos",
+   "descricao": "Comunicação com o Asaas: compras e assinaturas"
+  }
+ ],
+ "atualizadoEm": "2026-10-24T13:38:17.621Z",
+ "intervaloMinutos": 5
+}
