@@ -1,0 +1,315 @@
+{
+ "atual": {
+  "site": {
+   "estado": "ok",
+   "ms": 442,
+   "desde": "2026-10-20T12:40:42.829Z"
+  },
+  "api": {
+   "estado": "ok",
+   "ms": 1342,
+   "desde": "2026-10-20T12:40:42.829Z"
+  },
+  "banco": {
+   "estado": "ok",
+   "ms": 130,
+   "desde": "2026-10-20T12:40:42.829Z"
+  },
+  "pagamentos": {
+   "estado": "ok",
+   "ms": 929,
+   "desde": "2026-10-20T12:40:42.829Z"
+  }
+ },
+ "dias": {
+  "2026-10-20": {
+   "site": {
+    "ok": 7,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "api": {
+    "ok": 7,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "banco": {
+    "ok": 7,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "pagamentos": {
+    "ok": 7,
+    "fora": 0,
+    "desconhecido": 0
+   }
+  },
+  "2026-10-21": {
+   "site": {
+    "ok": 6,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "api": {
+    "ok": 6,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "banco": {
+    "ok": 6,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "pagamentos": {
+    "ok": 6,
+    "fora": 0,
+    "desconhecido": 0
+   }
+  },
+  "2026-10-22": {
+   "site": {
+    "ok": 6,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "api": {
+    "ok": 6,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "banco": {
+    "ok": 6,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "pagamentos": {
+    "ok": 6,
+    "fora": 0,
+    "desconhecido": 0
+   }
+  },
+  "2026-10-23": {
+   "site": {
+    "ok": 6,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "api": {
+    "ok": 6,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "banco": {
+    "ok": 6,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "pagamentos": {
+    "ok": 6,
+    "fora": 0,
+    "desconhecido": 0
+   }
+  },
+  "2026-10-24": {
+   "site": {
+    "ok": 8,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "api": {
+    "ok": 8,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "banco": {
+    "ok": 8,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "pagamentos": {
+    "ok": 8,
+    "fora": 0,
+    "desconhecido": 0
+   }
+  },
+  "2026-10-25": {
+   "site": {
+    "ok": 7,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "api": {
+    "ok": 7,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "banco": {
+    "ok": 7,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "pagamentos": {
+    "ok": 7,
+    "fora": 0,
+    "desconhecido": 0
+   }
+  },
+  "2026-10-26": {
+   "site": {
+    "ok": 5,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "api": {
+    "ok": 5,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "banco": {
+    "ok": 5,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "pagamentos": {
+    "ok": 5,
+    "fora": 0,
+    "desconhecido": 0
+   }
+  },
+  "2026-10-27": {
+   "site": {
+    "ok": 5,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "api": {
+    "ok": 5,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "banco": {
+    "ok": 5,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "pagamentos": {
+    "ok": 5,
+    "fora": 0,
+    "desconhecido": 0
+   }
+  },
+  "2026-10-28": {
+   "site": {
+    "ok": 5,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "api": {
+    "ok": 5,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "banco": {
+    "ok": 5,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "pagamentos": {
+    "ok": 5,
+    "fora": 0,
+    "desconhecido": 0
+   }
+  },
+  "2026-10-29": {
+   "site": {
+    "ok": 4,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "api": {
+    "ok": 4,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "banco": {
+    "ok": 4,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "pagamentos": {
+    "ok": 4,
+    "fora": 0,
+    "desconhecido": 0
+   }
+  },
+  "2026-10-30": {
+   "site": {
+    "ok": 5,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "api": {
+    "ok": 5,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "banco": {
+    "ok": 5,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "pagamentos": {
+    "ok": 5,
+    "fora": 0,
+    "desconhecido": 0
+   }
+  },
+  "2026-10-31": {
+   "site": {
+    "ok": 4,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "api": {
+    "ok": 4,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "banco": {
+    "ok": 4,
+    "fora": 0,
+    "desconhecido": 0
+   },
+   "pagamentos": {
+    "ok": 4,
+    "fora": 0,
+    "desconhecido": 0
+   }
+  }
+ },
+ "incidentes": [],
+ "componentes": [
+  {
+   "id": "site",
+   "nome": "Site",
+   "descricao": "app.whizpic.com — as páginas do sistema"
+  },
+  {
+   "id": "api",
+   "nome": "API",
+   "descricao": "Login, livros, geração e compras"
+  },
+  {
+   "id": "banco",
+   "nome": "Banco de dados",
+   "descricao": "Onde ficam contas, livros e compras"
+  },
+  {
+   "id": "pagamentos",
+   "nome": "Pagamentos",
+   "descricao": "Comunicação com o Asaas: compras e assinaturas"
+  }
+ ],
+ "atualizadoEm": "2026-10-31T20:30:09.506Z",
+ "intervaloMinutos": 5
+}
